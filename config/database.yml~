@@ -1,18 +1,21 @@
 development:
-  adapter: mysql2
-  encoding: utf8
-  database: db_development
-  username: root
-  password: root
+  adapter: postgresql
+  encoding: unicode
+  database: myapp_development
+  pool: 5
+  username: myapp
+  password:
 test:
-  adapter: mysql2
-  encoding: utf8
-  database: db_test
-  username: root
-  password: root
+  adapter: postgresql
+  encoding: unicode
+  database: myapp_test
+  pool: 5
+  username: myapp
+  password:
 production:
-  adapter: mysql2
-  encoding: utf8
-  database: db_production
-  username: root
-  password: 
+  adapter: postgresql
+  encoding: unicode
+  database: myapp_production
+  pool: 5
+  username: myapp
+  password:
