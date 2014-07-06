@@ -1,0 +1,11 @@
+class Post < ActiveRecord::Base
+validates :sender, :presence => true
+validates :reciever, :presence => true
+validates :sender, :length => {
+    :minimum   => 300,
+    :maximum   => 400,
+    :tokenizer => lambda { |str| str.scan(/\w+/) },
+    :too_short => "must have at least %{count} words",
+    :too_long  => "must have at most %{count} words"
+  }
+end
